@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F2F32DF-8759-426E-B725-B36FE0FADE26}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Clinica</RootNamespace>
+    <AssemblyName>Clinica</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLASES\CLEMPRESA.cs" />
+    <Compile Include="CLASES\CLEXPEDIENTES.cs" />
+    <Compile Include="CLASES\CLCONCEPTOS.cs" />
+    <Compile Include="CLASES\CLGASTOS.cs" />
+    <Compile Include="CLASES\CLGASTOS_DETALLE.cs" />
+    <Compile Include="CLASES\CLNACIONALIDAD.cs" />
+    <Compile Include="CLASES\CLOCUPACIONES.cs" />
+    <Compile Include="CLASES\CLPACIENTES.cs" />
+    <Compile Include="CLASES\CLPAGOS.cs" />
+    <Compile Include="CLASES\CLREPRESENTANTE.cs" />
+    <Compile Include="CLASES\CLUSUARIOS.cs" />
+    <Compile Include="FORMULARIOS\frmexpedientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmexpedientes.Designer.cs">
+      <DependentUpon>frmexpedientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmmenu.Designer.cs">
+      <DependentUpon>frmmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmpacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmpacientes.Designer.cs">
+      <DependentUpon>frmpacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmusuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\frmusuarios.Designer.cs">
+      <DependentUpon>frmusuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmacceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmacceso.Designer.cs">
+      <DependentUpon>frmacceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FORMULARIOS\frmexpedientes.resx">
+      <DependentUpon>frmexpedientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmmenu.resx">
+      <DependentUpon>frmmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmpacientes.resx">
+      <DependentUpon>frmpacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\frmusuarios.resx">
+      <DependentUpon>frmusuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmacceso.resx">
+      <DependentUpon>frmacceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icono-de-guardar-png-900x500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="borrar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="impresora.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\impresora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
